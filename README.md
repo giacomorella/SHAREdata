@@ -94,9 +94,14 @@ Module HO: HOUSING (HO)
 | income_property2 | Received income/rent of other real estate | yes=1 <br> no=2| ho029_=1 <br> ho029_=5|	
 | incomev_property2 | Income/rent of other real estate last year | Numeric  | ho030e |	
 
-	
 
 Module GV_HO: GENERATED VARIABLES HOUSING (GV_HO)
+
+| Symbol | Description  | Content | Construction using SHARE original or new symbols |
+|----------|----------|----------|----------|
+| nuts1_2003 | NUTS level 1  | | nuts1_2003 |	
+
+
 
 Module CO: CONSUMPTION (CO)
 
