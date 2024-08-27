@@ -161,10 +161,10 @@ Module GV_IMPUTATIONS: IMPUTATIONS (GV_IMPUTATIONS)
 | sbus | Share of own business | Numeric| sbus |
 | car | Value of cars | Numeric| car |
 | liab | Financial liabilities | Numeric| liab |
-| thinc | Total household income | ydip+ypen1+ypen2+ypen3+ypen4+ypen5+ypen6+yreg1+yreg2+yind+ysrent+yaohm+ybabsmf| thinc |
-| thexp | Total household expenditure | rhre+fahc+fohc+hprf+inpat+outpa+drugs+nurs| thexp |
+| thinc | Total household income | ydip+ypen1+ypen2+ypen3<br> +ypen4+ypen5+ypen6+yreg1 <br>+yreg2+yind+ysrent+yaohm<br>+ybabsmf| thinc |
+| thexp | Total household expenditure | rhre+fahc+fohc+hprf<br> +inpat+outpa+drugs+nurs| thexp |
 | yincnrp | Income from nonresponding partner | Numeric| yincnrp |
-| hrass | Household real assets | (home*perho/100 + vbus*sbus/100 + car + ores – mort) | hrass |
+| hrass | Household real assets | (home x perho/100) + (vbus x sbus/100) + car + ores – mort | hrass |
 | hgfass | Household gross financial assets | bacc+bsmf+slti | hgfass |
 | hnfass | Household net financial assets | hgfass – liab | hgfass |
 | hnetw | Household net worth | hnfass + hrass| hnetw |
