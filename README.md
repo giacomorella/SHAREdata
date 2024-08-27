@@ -1,29 +1,39 @@
+## Definitions of variables to construct ##
+
+*Household or family*:
+
+*Income*:
+
+*Marketable wealth*: the value of a family’s easily tradable assets (namely, home equity, other real estate, financial securities, bank deposits, defined contribution wealth, and business equity) minus its nonmortgage debt (including credit card debt, vehicle loans, and student loans). Home equity is value of main residence less outstanding mortgage on main residence.
+
 ## SHARE DATA ##
 
 I report here the core module we need to extract, together with the core variables. I start by reporting them wave by wave, so that we can highlight the variable definitions, harmonization, and differences across waves.
 
 ## Wave 1 ##
 
-Variables common to all modules
+*Variables common to all modules*
 
 | Symbol | Description (label) | Content | Construction using SHARE original symbols |
 |----------|----------|----------|----------|
-| mergeid | Row 1, Col 2 |  | mergeid|
-| hhidpn1 | Row 2, Col 2 |  | hhid1|
-| country | Row 3, Col 2 |  |country|
-| waveid | Row 3, Col 2 |  | waveid|
+| mergeid | Person identifier *fix across modules and waves) |  | mergeid|
+| hhidpn1 | Respondent ID - wave specific|  | hhid1|
+| country | Country identifier |  |country|
+| waveid | Identifier of original wave (person) |  | waveid |
+| waveid_hh | Identifier of original wave (household) |  | waveid_hh |
 | language | Row 3, Col 2 |  |language|
 
-Module CV: COVERSCREEN ON INDIVIDUAL LEVEL (CV_R)
+*Module CV: COVERSCREEN ON INDIVIDUAL LEVEL (CV_R)*
 
 | Symbol | Description  | Content | Construction using SHARE original symbols |
 |----------|----------|----------|----------|
 | hhsize | Household size |   Numeric | hhsize  |
 | age2004 | Age in 2004 |    Numeric| age2004 |
 | rsex | Gender |  male = 1, female = 0 | gender |
-| ... |   | |   | 
+| int_year | Interview year | Numeric | int_year  | 
+| int_month | Interview month | Numeric | int_month  | 
 
-Module DN: DEMOGRAPHIC MODULE (DN)
+*Module DN: DEMOGRAPHIC MODULE (DN)*
 
 | Symbol | Description  | Content | Construction using SHARE original symbols |
 |----------|----------|----------|----------|
@@ -36,7 +46,7 @@ Module DN: DEMOGRAPHIC MODULE (DN)
 | rmar | Marital status  | married/partner = 1 <br>  divorced/separated = 2 <br>  widowed = 3 <br> never married = 4  | dn014_  = 1, 2, 3  <br> dn014_  = 5 <br> dn014_  = 6 <br> dn014_  = 4|
 
 
-Module EP: EMPLOYMENT AND PENSIONS MODULE (EP)
+*Module EP: EMPLOYMENT AND PENSIONS MODULE (EP)*
 
 | Symbol | Description  | Content | Construction using SHARE original or new symbols |
 |----------|----------|----------|----------|
@@ -64,7 +74,7 @@ Module EP: EMPLOYMENT AND PENSIONS MODULE (EP)
 | ep106_6 | Exp. age collection: priv. occup. early retir. | | retagexp_c6 |	
 
 
-Module EP: FINANCIAL TRANFERS (FT)
+*Module EP: FINANCIAL TRANFERS (FT)*
 
 | Symbol | Description  | Content | Construction using SHARE original or new symbols |
 |----------|----------|----------|----------|
@@ -80,7 +90,7 @@ Module EP: FINANCIAL TRANFERS (FT)
 | value_4inher | Value received gift/inheritance 4 | Numeric| ft018e_4 |	
 | value_5inher | Value received gift/inheritance 5 | Numeric | ft018e_5 |	
 
-Module HO: HOUSING (HO)
+*Module HO: HOUSING (HO)*
 
 | Symbol | Description  | Content | Construction using SHARE original or new symbols |
 |----------|----------|----------|----------|
@@ -95,12 +105,11 @@ Module HO: HOUSING (HO)
 | incomev_property2 | Income/rent of other real estate last year | Numeric  | ho030e |	
 
 
-Module GV_HO: GENERATED VARIABLES HOUSING (GV_HO)
+*Module GV_HO: GENERATED VARIABLES HOUSING (GV_HO)*
 
 | Symbol | Description  | Content | Construction using SHARE original or new symbols |
 |----------|----------|----------|----------|
 | nuts1_2003 | NUTS level 1  | | nuts1_2003 |	
-
 
 
 Module CO: CONSUMPTION (CO)
@@ -109,66 +118,82 @@ Module GV_IMPUTATIONS: IMPUTATIONS (GV_IMPUTATIONS)
 
 | Symbol | Description  | Content | Construction using SHARE original or new symbols |
 |----------|----------|----------|----------|
-| ydip |   | |  |	
-| yind |   | |  |	
-| ypen1 |   | |  |	
-| ypen2 |   | |  |	
-| ypen3 |   | |  |	
-| ypen4 |   | |  |	
-| ypen5 |   | |  |	
-| ypen6 |   | |  |	
-| yreg1 |   | |  |	
-| yreg2 |   | |  |	
-| ybabsmf |   | |  |	
-| aftgiv |   | |  |	
-| aftrec |   | |  |	
-| aftinh |   | |  |	
-| rhre |   | |  |	
-| home |   | |  |	
-| mort |   | |  |	
-| ores |   | |  |	
-| yrent |   | |  |	
-| yaohm |   | |  |	
-| otrf |   | |  |	
-| fahc |   | |  |	
-| fohc |   | |  |	
-| telc |   | |  |	
-| bacc |   | |  |	
-| bsmf |   | |  |	
-| slti |   | |  |	
-| vbus |   | |  |	
-| sbus |   | |  |	
-| car |   | |  |	
-| liab |   | |  |	
-| thinc |   | |  |	
-| thexp |   | |  |	
-| hnetw |   | |  |	
-| yincnrp |   | |  |	
-| hrass |   | |  |	
-| hgfass |   | |  |	
-| gender |   | |  |	
-| age |   | |  |	
-| age_p |   | |  |	
-| yedu_p |   | |  |	
-| isced |   | |  |	
-| mstat |   | |  |	
-| nchild |   | |  |	
-| cjs |   | |  |	
-| pwork |   | |  |	
-| afwork |   | |  |	
-| empstat1 |   | |  |	
-| empstat2 |   | |  |	
-| mtoj |   | |  |	
-| currency |   | |  |	
-| nomx2003 |   | |  |	
-| nomx2004 |   | |  |	
-| nomx2005 |   | |  |	
-| pppc2003 |   | |  |	
-| pppc2004 |   | |  |	
-| pppc2005 |   | |  |	
-| pppk2004 |   | |  |	
-| pppk2003 |   | |  |	
-| pppk2005 |   | |  |	
+| implicat | Implicat number | implicat = 1, 2, 3, 4, 5| implicat |
+| htype | Household type | 1 = 1 S <br> 2 = 1 CNRP  <br> 3 = 1 C2R <br> 4 = 1 CNRP + 1 S <br> 5 = Multi S<br> 6 = 1 C2R + 1 S <br> 7 = 1 C2R + 1 CNRP <br> 8 = Multi C2R <br> 9 = Multi CNRP <br> 10 = Multi S + 1 C2R <br> 11 = Multi S + 1 CNRP  <br> 12 =  1 S + Multi C2R | htype |
+| exrate | Exchange rate | Numeric | exrate |
+| single | Single | no=1 <br> yes=1 | single |
+| couple | Couple | no=1 <br> yes=1 | couple |
+| partner | Partner in the couple | no=1 <br> yes=1 | partner |
+| sample1 | Imputation sample for single | no=1 <br> yes=1  | sample1 |
+| sample2 | Imputation sample for couples with two partners interviewed | no=1 <br> yes=1  | sample2 |
+| sample3 | Imputation sample for all couples | no=1 <br> yes=1  | sample3 |
+| ydip | Earnings from employment | Numeric | ydip |
+| yind | Earnings from self-employment | Numeric | yind |
+| ypen1 | Old age, early retirement, and survisor pensions | Numeric | ypen1 |
+| ypen2 | Private and occupational pensions | Numeric| ypen2 |
+| ypen3 | Disability pensions and benefits | Numeric| ypen3 |
+| ypen4 | Unemployment benefits and insurances | Numeric| ypen4 |
+| ypen5 | Social assistance | Numeric | ypen5 |
+| ypen6 | Sickness benefits and pensions |Numeric | ypen6 |
+| yreg1 | Other private pensions |Numeric | yreg1 |
+| yreg2 | Private transfers | Numeric| yreg2 |
+| ybabsmf | Interest/dividend from financial assett |Numeric | ybabsmf |
+| y_e | Earning from employment and self-employment | Numeric | max(ydip + yind,0)  |
+| y_p | Total pension income | Numeric | max(ypen1 + ypen2,0)  |
+| y_px | Total pension income, incl. disability pension | | max(ypen1 + ypen2 + ypen3,0)  |
+| aftgiv | Financial transfers given | Numeric | aftgiv |
+| aftrec | Financial transfers received | Numeric | aftrec |
+| aftinh | Inheritance received | Numeric | aftinh |
+| rhre | Rent and home-related expenditures | Numeric| rhre |
+| home | Value of main residence | Numeric (non-owner=0) | home |
+| mort | Mortgage on main residence | Numeric | mort |
+| ores | Value of other real estate - Amount | Numeric| ores |
+| yrent | Income from rent | Numeric | yrent |
+| yaohm | Income from other household members | Numeric| yaohm |
+| otrf | Owner, tenant or rent free |  owner=1 <br> cooperative=1 <br> tenant=3 <br> subtenant=4 <br> rent-free=5 <br> usufruct=6 | otrf |
+| fahc | Food at home consumption |Numeric | fahc |
+| fohc | Food outside home consumption |Numeric | fohc |
+| telc | Amount spent on telephones | Numeric| telc |
+| bacc | Bank accounts | Numeric | bacc |
+| bsmf | Bond, stock and mutual funds |Numeric | bsmf |
+| slti | Savings for long-term investments | Numeric| slti |
+| vbus | Value of own business | Numeric| vbus |
+| sbus | Share of own business | Numeric| sbus |
+| car | Value of cars | Numeric| car |
+| liab | Financial liabilities | Numeric| liab |
+| thinc | Total household income | ydip+ypen1+ypen2+ypen3+ypen4+ypen5+ypen6+yreg1+yreg2+yind+ysrent+yaohm+ybabsmf| thinc |
+| thexp | Total household expenditure | rhre+fahc+fohc+hprf+inpat+outpa+drugs+nurs| thexp |
+| yincnrp | Income from nonresponding partner | Numeric| yincnrp |
+| hrass | Household real assets | (home*perho/100 + vbus*sbus/100 + car + ores – mort) | hrass |
+| hgfass | Household gross financial assets | bacc+bsmf+slti | hgfass |
+| hnfass | Household net financial assets | hgfass – liab | hgfass |
+| hnetw | Household net worth | hnfass + hrass| hnetw |
+| gender | Gender | no=1 <br> yes=2 | gender |
+| age | Age |Numeric | age |
+| age_p | Age of partner | Numeric | age_p |
+| yedu | Years of education | Numeric| yedu |
+| yedu_p | Years of education of partner | Numeric| yedu_p |
+| isced | ISCED 1997 coding of education | String | isced |
+| mstat | Marital status |Married, living with spouse=1<br> Registered partnership=1<br> Married, not living with spouse=3<br> Never married=4<br> Divorced=5<br> Widowed  | mstat |
+| nchild | Number of children | Numeric| nchild |
+| cjs | Current job situation | Retired=1<br>Employed or self-employed=2<br>Unemployed=3<br>Permanently sick=4<br>Homemaker=5<br>Other=97| cjs |
+| pwork | Did any paid work | no=1 <br> yes=2 | pwork |
+| afwork | Away from work during last month | | afwork |
+| empstat1 | Employee or self-employed first job | | empstat1 |
+| empstat2 | Employee or self-employed second job | | empstat2 |
+| mtoj | More than one job | | mtoj |
+| currency | currency | | currency |
+| nomx2003 | Nominal exchange rate (national currency/Euro), annual average, 2003 | | nomx2003 |
+| nomx2004 | Nominal exchange rate (national currency/Euro), annual average, 2004 | | nomx2004 |
+| nomx2005 | Nominal exchange rate (national currency/Euro), annual average, 2005 | | nomx2005 |
+| pppc2003 | Current PPP exchange rate (national currency/Euro), 2003 | | pppc2003 |
+| pppc2004 | Current PPP exchange rate (national currency/Euro), 2004 | | pppc2004 |
+| pppc2005 | Current PPP exchange rate (national currency/Euro), 2005 | | pppc2005 |
+| pppk2004 | Constant PPP exchange rate (national currency/Euro), (Germany 2015=1), 2004 | | pppk2004 |
+| pppk2003 | Constant PPP exchange rate (national currency/Euro), (Germany 2015=1), 2003 | | pppk2003 |
+| pppk2005 | Constant PPP exchange rate (national currency/Euro), (Germany 2015=1), 2005 | | pppk2005 |
+
+
 
     
 Module WH: WEIGHTS (WH)
