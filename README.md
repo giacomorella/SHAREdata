@@ -177,12 +177,12 @@ Module GV_IMPUTATIONS: IMPUTATIONS (GV_IMPUTATIONS)
 | mstat | Marital status |Married, living with spouse=1<br> Registered partnership=1<br> Married, not living with spouse=3<br> Never married=4<br> Divorced=5<br> Widowed  | mstat |
 | nchild | Number of children | Numeric| nchild |
 | cjs | Current job situation | Retired=1<br>Employed or self-employed=2<br>Unemployed=3<br>Permanently sick=4<br>Homemaker=5<br>Other=97| cjs |
-| pwork | Did any paid work | no=1 <br> yes=2 | pwork |
-| afwork | Away from work during last month | | afwork |
-| empstat1 | Employee or self-employed first job | | empstat1 |
-| empstat2 | Employee or self-employed second job | | empstat2 |
-| mtoj | More than one job | | mtoj |
-| currency | currency | | currency |
+| pwork | Did any paid work | no=0 <br> yes=1 | pwork |
+| afwork | Away from work during last month | no=0 <br> yes=1 | afwork |
+| empstat1 | Employee or self-employed first job | employee=1 <br> civil servant=2 <br> self-employee=3| empstat1 |
+| empstat2 | Employee or self-employed second job | employee=1 <br> civil servant=2 <br> self-employee=3 | empstat2 |
+| mtoj | More than one job |no=0 <br> yes=1  | mtoj |
+| currency | Currency | String (5 categories)  | currency |
 | nomx2003 | Nominal exchange rate (national currency/Euro), annual average, 2003 | | nomx2003 |
 | nomx2004 | Nominal exchange rate (national currency/Euro), annual average, 2004 | | nomx2004 |
 | nomx2005 | Nominal exchange rate (national currency/Euro), annual average, 2005 | | nomx2005 |
@@ -192,8 +192,6 @@ Module GV_IMPUTATIONS: IMPUTATIONS (GV_IMPUTATIONS)
 | pppk2004 | Constant PPP exchange rate (national currency/Euro), (Germany 2015=1), 2004 | | pppk2004 |
 | pppk2003 | Constant PPP exchange rate (national currency/Euro), (Germany 2015=1), 2003 | | pppk2003 |
 | pppk2005 | Constant PPP exchange rate (national currency/Euro), (Germany 2015=1), 2005 | | pppk2005 |
-
-
 
     
 Module WH: WEIGHTS (WH)
