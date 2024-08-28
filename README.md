@@ -112,8 +112,6 @@ I report here the core module we need to extract, together with the core variabl
 | nuts1_2003 | NUTS level 1  | | nuts1_2003 |	
 
 
-Module CO: CONSUMPTION (CO)
-
 Module GV_IMPUTATIONS: IMPUTATIONS (GV_IMPUTATIONS)
 (each implicate is saved in a different dataset and a single dataset will all implicates is saved too)
 
@@ -405,3 +403,6 @@ Module GV_IMPUTATIONS: IMPUTATIONS (GV_IMPUTATIONS)
 |----------|----------|----------|----------|
 | cchw_w2 | Calibrated cross-sectional household weight - wave 2  | Numeric | wghh |	
 | cciw_w2 |  Calibrated cross-sectional individual weight - wave 2 | Numeric | wgid |
+
+*Composition of aggregated imputation variables in wave 2* 
+(see p. 91 and 92 of SHARE Release Guide)
