@@ -6,6 +6,21 @@
 
 *Marketable wealth*: the value of a family’s easily tradable assets (namely, home equity, other real estate, financial securities, bank deposits, defined contribution wealth, and business equity) minus its nonmortgage debt (including credit card debt, vehicle loans, and student loans). Home equity is value of main residence less outstanding mortgage on main residence.
 
+*Household net worth in SHARE or hnetw* (computed by SHARE) is the balancing item in the following stylized balance sheet created using SHARE variables:
+| Assets | Liabilities and net worth | 
+|----------|----------|
+| Value of main residence, owned part (home*perho) | Mortgage on main residence (mort) |
+| Value of other real estate (ores)| Financial liabilities (liab) |
+| Value of own business, owned part (vbus*sbus) |  |
+| Value of cars (car) |  |
+| Bank accounts (bacc) |  |
+| Bond, stock and mutual funds (bsmf) |  |
+| Savings for long-term investments (slti) |  |
+|  | Household net worth (hnetw)|
+
+
+
+
 ## SHARE DATA ##
 
 Level capture whether the variable refers to the individual respondent or the family (work in progress).
