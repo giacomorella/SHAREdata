@@ -219,6 +219,16 @@ Question for `ever_inher`: Have you [or] [your] [husband/wife/partner] ever rece
 | thinc2 | Total household income - Version B (GV_IMP) | | | &check; | &check;|&check;|&check; |&check; |&check; |
 | thexp | Total household expenditure (GV_IMP) | |&check; | &check; | &check;|&check;|&check; |&check; |&check; |
 
+# Household wealth (calculated by SHARE) #
+| Name | Label | Refer to | W1 | W2 | W4 | W5 | W6 | W8 | W9 |  
+|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
+| hnetw | Household net worth (GV_IMP) | | | | | | | | | 
+| hrass | Household real assets (GV_IMP) | | | | | | | | | 
+| hgfass | Household gross financial assets (GV_IMP) | | | | | | | | | 
+| hnfass | Household net financial assets (GV_IMP) | | | | | | | | | 
+
+
+
 # Currency and exchange rate #
 | Name | Label | Refer to | W1 | W2 | W4 | W5 | W6 | W8 | W9 |  
 |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
